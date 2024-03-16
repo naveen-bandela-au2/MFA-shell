@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./home";
 import Main from "./main";
@@ -9,11 +9,11 @@ import Main from "./main";
 import "./index.css";
 
 const App = () => (
-  <BrowserRouter>
+  <HashRouter>
     <Routes>
       <Route path="/" element={<Main />} />
       <Route path="home" element={<Home />} />
     </Routes>
-  </BrowserRouter>
+  </HashRouter>
 );
 ReactDOM.render(<App />, document.getElementById("app"));
